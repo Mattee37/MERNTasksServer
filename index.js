@@ -16,7 +16,7 @@ app.use(cors());
 app.use(express.json({ extend: true }));
 
 //asigna a la constante el puerto asignado el el archivo de enviroment o el 4000
-const PORT = process.env.PORT || 4000;
+const port = process.env.port || 4000;
 
 //crea las rutas y les asigna a las mismas sus distintos metodos
 //usuarios
@@ -29,6 +29,6 @@ app.use("/api/proyectos", require("./routes/proyectos"));
 app.use("/api/tareas", require("./routes/tareas"));
 
 //escucha las respuestas del servidor en el puerto
-app.listen(PORT, () => {
-  console.log(`Server on port ${PORT}`);
+app.listen(port, "0.0.0.0", () => {
+  console.log(`Server on port ${port}`);
 });
