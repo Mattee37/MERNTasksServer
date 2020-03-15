@@ -28,7 +28,7 @@ app.use(function(req, res, next) {
 app.use(express.json({ extend: true }));
 
 //asigna a la constante el puerto asignado el el archivo de enviroment o el 4000
-const port = process.env.port || 4000;
+const port = process.env.PORT || 4000;
 
 //crea las rutas y les asigna a las mismas sus distintos metodos
 //usuarios
