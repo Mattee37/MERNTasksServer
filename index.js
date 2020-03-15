@@ -12,18 +12,6 @@ conectarDB();
 //habilita cors
 app.use(cors());
 
-app.use(function(req, res, next) {
-  res.header(
-    "Access-Control-Allow-Origin",
-    "https://powerful-ridge-56456.herokuapp.com/"
-  );
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept"
-  );
-  next();
-});
-
 //habilita a la app a usar JSON por medio de express
 app.use(express.json({ extend: true }));
 
